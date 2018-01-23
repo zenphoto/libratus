@@ -4,7 +4,7 @@
 // 	force UTF-8 Ø
 class ThemeOptions {
 
-	function ThemeOptions() {
+	function __construct() {
 		// force core theme options for this theme
 		setThemeOption('albums_per_row',3,null,'libratus');
 		setThemeOption('images_per_row',6,null,'libratus');
