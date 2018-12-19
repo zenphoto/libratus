@@ -3,8 +3,7 @@
 # Libratus
 Libratus is a [Zenphoto](http://zenphoto.org) theme that is fully responsive which looks great on desktop to mobile naturally using mobile first design.  It utilizes image and album statisitcs more heavily than other themes, although not required.  Home page has a full screen slideshow with optional images to pull (latest, random, popular, etc.).  Great theme for a site with a large image collection.
 
-![Index Page](https://github.com/gjr-osweb/libratus/blob/master/screenshots/index.png "Gallery Index")
-More screenshots viewable in the repo.
+[You view some screenshots here](https://www.zenphoto.org/theme/libratus/index.png.html)
 
 __To Install__    
 Place the "Libratus" folder that is inside the package ONLY (not the entire package), inside the themes folder of your Zenphoto installation (via FTP).  Navigate to the theme tab on your backend installation and enable the theme, set/view theme options.
