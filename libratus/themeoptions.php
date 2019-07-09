@@ -53,10 +53,10 @@ class ThemeOptions {
 		setThemeOptionDefault('libratus_related_maxnumber', 10);
 		if (class_exists('cacheManager')) {
 			$me = basename(dirname(__FILE__));
-			cacheManager::deleteThemeCacheSizes($me);
-			cacheManager::addThemeCacheSize($me, getThemeOption('image_size'), NULL, NULL, NULL, NULL, NULL, NULL, false, getOption('fullimage_watermark'), NULL, NULL); // full image size
-			cacheManager::addThemeCacheSize($me, getThemeOption('thumb_size'), NULL, NULL, NULL, NULL, NULL, NULL, true, getOption('Image_watermark'), NULL, NULL); // default thumb
-			cacheManager::addThemeCacheSize($me, NULL, getThemeOption('libratus_maxwidth'), 550, NULL, NULL, NULL, NULL, true, getOption('Image_watermark'), NULL, NULL); //big header images	
+			cacheManager::deleteCacheSizes($me);
+			cacheManager::addCacheSize($me, getThemeOption('image_size'), NULL, NULL, NULL, NULL, NULL, NULL, false, getOption('fullimage_watermark'), NULL, NULL); // full image size
+			cacheManager::addCacheSize($me, getThemeOption('thumb_size'), NULL, NULL, NULL, NULL, NULL, NULL, true, getOption('Image_watermark'), NULL, NULL); // default thumb
+			cacheManager::addCacheSize($me, NULL, getThemeOption('libratus_maxwidth'), 550, NULL, NULL, NULL, NULL, true, getOption('Image_watermark'), NULL, NULL); //big header images	
 		}
 	}
 	
