@@ -19,15 +19,18 @@ $quickmenu .= '<a id="scrollup" class="quick-menu scrollup" title="'.gettext('Sc
 $quickmenu .= '</div>';
 
 if ($_zp_current_album && $_zp_gallery_page != 'favorites.php' && $_zp_gallery_page != '404.php') {
-$randomImage = getRandomImagesAlbum($_zp_current_album);
+$randomImages = getImageStatistic(1, 'random', $_zp_current_album->getFileName());
 } else {
-$randomImage = getRandomImages();
+$randomImages = getImageStatistic(1, 'random', '');
 }
-if (is_object($randomImage) && $randomImage->exists) {
-	$bg = html_encode(pathurlencode($randomImage->getCustomImage(1200,null,null,null,null,null,null,true)));
-} else {
-	$bg = '';
-} ?>
+$randomImage = $randomImages[0];
+if ( $randomImage ) {
+	//foreach($randomImages as $randomImage) {
+		$bg = html_encode(pathurlencode($randomImage->getCustomImage(1200,null,null,null,null,null,null,true)));
+	} else {
+		$bg = '';
+	} 
+?>
 
 <!DOCTYPE html>
 <html>

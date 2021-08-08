@@ -113,7 +113,7 @@ class ThemeOptions {
 		$albumlist['Entire Gallery'] = '';
 		$albums = getNestedAlbumList(null, 9999999, false);
 		foreach($albums as $album) {
-			$albumobj = newAlbum($album['name'], true);
+			$albumobj = AlbumBase::newAlbum($album['name'], true);
 			$albumlist[$album['name']] = $album['name'];
 		}
 		return array(	
