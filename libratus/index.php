@@ -6,10 +6,7 @@
 				<?php 
 				$images = getImageStatistic(5,getOption('libratus_ss_type'),getOption('libratus_ss_album'),true);
 				foreach ($images as $image) {
-				echo '<li>';
-				$html = '<img src="' . html_encode(pathurlencode($image->getCustomImage(1200,null,null,null,null,null,null,true))) . '" alt="' . html_encode($image->getTitle()) . '" />';
-				echo zp_apply_filter('custom_image_html', $html, false);
-				echo '</li>';
+					echo '<li><img src="' . html_encode(pathurlencode($image->getCustomImage(1200,null,null,null,null,null,null,true))) . '" alt="' . html_encode($image->getTitle()) . '" /></li>';
 				} ?>
 			</ul>
 		<?php } else { ?>
