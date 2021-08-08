@@ -23,13 +23,13 @@ $randomImages = getImageStatistic(1, 'random', $_zp_current_album->getFileName()
 } else {
 $randomImages = getImageStatistic(1, 'random', '');
 }
-$randomImage = $randomImages[0];
-if ( $randomImage ) {
-	//foreach($randomImages as $randomImage) {
-		$bg = html_encode(pathurlencode($randomImage->getCustomImage(1200,null,null,null,null,null,null,true)));
-	} else {
-		$bg = '';
-	} 
+
+if ( isset($randomImages) ) {
+	$randomImage = $randomImages[0];
+	$bg = html_encode(pathurlencode($randomImage->getCustomImage(1200,null,null,null,null,null,null,true)));
+} else {
+	$bg = '';
+} 
 ?>
 
 <!DOCTYPE html>
