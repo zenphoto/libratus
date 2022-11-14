@@ -16,9 +16,9 @@
 			<div id="home-logo">
 				<div class="inner pad">
 					<?php if (file_exists(UPLOAD_FOLDER.'/logo.png')) { ?>
-					<img id="logo" src="<?php echo WEBPATH.'/'.UPLOAD_FOLDER.'/logo.png'; ?>" alt="<?php printGalleryTitle(); ?>" />
+					<img id="logo" src="<?php echo WEBPATH.'/'.UPLOAD_FOLDER.'/logo.png'; ?>" alt="<?php printGalleryTitle(); printCurrentPageAppendix(); ?>" />
 					<?php } else { ?>
-					<h1 id="logo-text" ><?php printGalleryTitle(); ?></h1>
+					<h1 id="logo-text" ><?php printGalleryTitle(); printCurrentPageAppendix(); ?></h1>
 					<?php } ?>
 				</div>
 			</div>

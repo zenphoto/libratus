@@ -19,7 +19,7 @@ if ($total == 0) {
 
 		<div id="page-header" class="wrap" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(<?php echo $bg; ?>);">
 			<div class="inner">
-				<h1><?php echo gettext('Search'); ?></h1>
+				<h1><?php echo gettext('Search'); printCurrentPageAppendix();?></h1>
 			</div>
 		</div>
 

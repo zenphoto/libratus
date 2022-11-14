@@ -11,7 +11,7 @@
 				<?php echo $quickmenu; ?>
 				<div class="pad" id="breadcrumb">
 					<a href="<?php echo getGalleryIndexURL(); ?>"><i class="fa fa-home"></i>&nbsp;<?php printGalleryTitle(); ?></a>&nbsp;/
-					<?php printParentBreadcrumb('',' / ',' / '); printAlbumTitle(); ?>
+					<?php printParentBreadcrumb('',' / ',' / '); printAlbumTitle(); printCurrentPageAppendix(); ?>
 				</div>
 			</div>
 		</div>

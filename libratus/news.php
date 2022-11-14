@@ -24,7 +24,13 @@ include('inc-header.php'); ?>
 					<a href="<?php echo getGalleryIndexURL(); ?>"><i class="fa fa-home"></i>&nbsp;<?php printGalleryTitle(); ?></a>&nbsp;/
 					<?php printNewsIndexURL(null,''); echo ' / '; ?>
 					<?php printZenpageItemsBreadcrumb('',' / '); ?>
-					<?php if (is_NewsArticle()) { printNewsTitle(); } ?>
+					<?php 
+					if (is_NewsArticle()) { 
+						printNewsTitle(); 
+					} else {
+						printCurrentPageAppendix(); 
+					}
+					?>
 				</div>
 			</div>
 		</div>
