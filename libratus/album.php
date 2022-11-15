@@ -69,7 +69,7 @@
 								<?php printImageThumb(null,'check-flagthumb scale'); ?>
 							</a>
 							<div class="caption caption-image">
-								<?php if (isImagePhoto()) { ?>
+								<?php if ($_zp_current_image->isPhoto()) { ?>
 								<a class="swipebox image-zoom" title="<?php echo html_encode('<a href="'.getImageURL().'">'.getBareImageTitle().'</a>'); ?>" href="<?php echo html_encode(getDefaultSizedImage()); ?>"><i class="fa fa-search-plus fa-lg"></i></a>
 								<?php } ?>
 								<?php if (function_exists('getCommentCount')) {
@@ -147,7 +147,7 @@
 		<div id="map-gallery" class="clearfix">
 			<div id="map-wrap">
 				<?php if (function_exists('printOpenStreetMap')) { 
-					printOpenStreetMap();
+					openStreetMap::printOpenStreetMap();
 				} else {
 					printGoogleMap(gettext('Show Google Map'),null,'show'); 
 				} ?>

@@ -23,11 +23,11 @@
 			<div class="inner">
 				<div class="gallery pad fullimage">
 					<div class="gallery-fullimage">
-						<?php if (isImagePhoto()) { ?>
+						<?php if ($_zp_current_image->isPhoto()) { ?>
 						<a class="swipebox" title="<?php echo getBareImageTitle(); ?>" href="<?php echo html_encode(getDefaultSizedImage()); ?>">
 						<?php } ?>
 						<?php printDefaultSizedImage(getBareImageTitle(),'scale'); ?>
-						<?php if (isImagePhoto()) { ?>
+						<?php if ($_zp_current_image->isPhoto()) { ?>
 						</a>
 						<?php } ?>
 						<?php if (getImageData('copyright')) { ?><p class="image-copy"><i class="fa fa-copyright"></i> <?php echo getImageData('copyright'); ?></p><?php } ?>
@@ -58,7 +58,7 @@
 					<hr />
 					<?php if (getOption('libratus_date_images')) { ?><div><i class="fa fa-calendar fa-fw"></i> <?php printImageDate(); ?></div><?php } ?>
 					<?php if (getOption('libratus_download')) { ?><div><i class="fa fa-download fa-fw"></i> <a href="<?php echo html_encode(getFullImageURL()); ?>" title="<?php echo gettext('Download'); ?>"><?php echo gettext('Download').' ('.getFullWidth().' x '.getFullHeight().')'; ?></a></div><?php } ?>
-					<?php if (function_exists('printSlideShowLink') && (getNumImages() > 1) && isImagePhoto()) { ?><hr /><div class="slideshow-link"><i class="fa fa-play fa-fw"></i> <?php printSlideShowLink(); ?></div><?php } ?>
+					<?php if (function_exists('printSlideShowLink') && (getNumImages() > 1) && $_zp_current_image->isPhoto()) { ?><hr /><div class="slideshow-link"><i class="fa fa-play fa-fw"></i> <?php printSlideShowLink(); ?></div><?php } ?>
 					
 					<?php if (getOption('libratus_social')) include ('inc-socialshare.php'); ?>
 					
@@ -68,7 +68,7 @@
 							if ($map->getGeoData()) {
 								setOption('osmap_width','100%',false); // wipe out any px settings for plugin, flex set in css
 								setOption('osmap_height','300px',false);
-								printOpenStreetMap();
+								openStreetMap::printOpenStreetMap();
 							}
 						} elseif (function_exists('printGoogleMap')) {
 							if (getGeoCoord($_zp_current_image)) {
@@ -132,7 +132,7 @@
 								<img src="<?php echo html_encode(pathurlencode($thumburl)); ?>" alt="<?php echo html_encode($obj->getTitle()); ?>" />
 							</a>
 							<div class="caption caption-image">
-								<?php if (isImagePhoto($obj)) { ?>
+								<?php if (isPhoto($obj)) { ?>
 								<a class="swipebox image-zoom" title="<?php echo html_encode('<a href="'.$obj->getLink().'">'.$obj->getTitle().'</a>'); ?>" href="<?php echo html_encode($obj->getSizedImage(getOption('image_size'))); ?>"><i class="fa fa-search-plus fa-lg"></i></a>
 								<?php } ?>
 								<?php if (function_exists('getCommentCount')) {

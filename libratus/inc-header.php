@@ -19,7 +19,7 @@ $quickmenu .= '<a id="scrollup" class="quick-menu scrollup" title="'.gettext('Sc
 $quickmenu .= '</div>';
 
 if ($_zp_current_album && $_zp_gallery_page != 'favorites.php' && $_zp_gallery_page != '404.php') {
-$randomImages = getImageStatistic(1, 'random', $_zp_current_album->getFileName());
+$randomImages = getImageStatistic(1, 'random', $_zp_current_album->getName());
 } else {
 $randomImages = getImageStatistic(1, 'random', '');
 }
@@ -99,7 +99,7 @@ if ( isset($randomImages) ) {
 		<ul id="nav">
 			<?php 
 			$hometext = gettext('Home');
-			if ($_zp_gallery->getWebsiteURL()) { ?>
+			if ($_zp_gallery->getParentSiteURL()) { ?>
 			<li><?php printHomeLink(); ?><li>
 			<?php $hometext = gettext('Gallery'); 
 			} ?>

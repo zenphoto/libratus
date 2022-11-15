@@ -81,7 +81,7 @@
 								<?php echo '<img src="' . html_encode(pathurlencode($image->getThumb())) . '" alt="' . html_encode($image->getTitle()) . "\" /></a>\n<br />"; ?>
 							</a>
 							<div class="caption caption-image">
-								<?php if (isImagePhoto($image)) { ?>
+								<?php if (isPhoto($image)) { ?>
 								<a class="swipebox image-zoom" title="<?php echo html_encode('<a href="'.$image->getLink().'">'.$image->getTitle().'</a>'); ?>" href="<?php echo html_encode($image->getSizedImage(getOption('image_size'))); ?>"><i class="fa fa-search-plus fa-lg"></i></a>
 								<?php } ?>
 								<?php if (function_exists('getCommentCount')) {
