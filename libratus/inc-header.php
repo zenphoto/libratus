@@ -18,13 +18,15 @@ $quickmenu .= '<a id="search-icon" class="quick-menu" href="'.getCustomPageURL('
 $quickmenu .= '<a id="scrollup" class="quick-menu scrollup" title="'.gettext('Scroll to top').'"><i class="fa fa-chevron-circle-up fa-lg"></i></a>';
 $quickmenu .= '</div>';
 
-if ($_zp_current_album && $_zp_gallery_page != 'favorites.php' && $_zp_gallery_page != '404.php') {
-$randomImages = getImageStatistic(1, 'random', $_zp_current_album->getName());
-} else {
-$randomImages = getImageStatistic(1, 'random', '');
+$randomImages = array();
+if (function_exists('getImageStatistic')) {
+	if ($_zp_current_album && $_zp_gallery_page != 'favorites.php' && $_zp_gallery_page != '404.php') {
+		$randomImages = getImageStatistic(1, 'random', $_zp_current_album->getName());
+	} else {
+		$randomImages = getImageStatistic(1, 'random', '');
+	}
 }
-
-if ( isset($randomImages) ) {
+if (!empty($randomImages) ) {
 	$randomImage = $randomImages[0];
 	$bg = html_encode(pathurlencode($randomImage->getCustomImage(1200,null,null,null,null,null,null,true)));
 } else {
