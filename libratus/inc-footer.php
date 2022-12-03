@@ -378,7 +378,7 @@ var cbpBGSlideshow = (function() {
 			$navNext : $controls.find( 'span.cbp-binext' ),
 			$navPlayPause : $controls.find( 'span.cbp-bipause' )
 		},
-		// current item´s index
+		// current itemÂ¥s index
 		current = 0,
 		// timeout
 		slideshowtime,
