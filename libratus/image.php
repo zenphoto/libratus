@@ -64,7 +64,7 @@
 					
 					<?php if ((function_exists('printGoogleMap')) || (function_exists('printOpenStreetMap'))) {
 						if (function_exists('printOpenStreetMap')) {
-							$map = new zpOpenStreetMap();
+							$map = new OpenStreetMap();
 							if ($map->getGeoData()) {
 								setOption('osmap_width','100%',false); // wipe out any px settings for plugin, flex set in css
 								setOption('osmap_height','300px',false);
@@ -132,7 +132,7 @@
 								<img src="<?php echo html_encode(pathurlencode($thumburl)); ?>" alt="<?php echo html_encode($obj->getTitle()); ?>" />
 							</a>
 							<div class="caption caption-image">
-								<?php if (isPhoto($obj)) { ?>
+								<?php if ($obj->isPhoto()) { ?>
 								<a class="swipebox image-zoom" title="<?php echo html_encode('<a href="'.$obj->getLink().'">'.$obj->getTitle().'</a>'); ?>" href="<?php echo html_encode($obj->getSizedImage(getOption('image_size'))); ?>"><i class="fa fa-search-plus fa-lg"></i></a>
 								<?php } ?>
 								<?php if (function_exists('getCommentCount')) {

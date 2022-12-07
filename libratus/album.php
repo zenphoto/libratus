@@ -56,7 +56,7 @@
 									setOption('gmap_height',400,false);
 								}
 							} elseif (function_exists('printOpenStreetMap')) {
-								$map = new zpOpenStreetMap();
+								$map = new OpenStreetMap();
 								if ($map->getGeoData()) {
 									$gmap_c++; // Print the map, at least one...
 									setOption('osmap_width','100%',false); // wipe out any px settings for plugin, flex set in css
