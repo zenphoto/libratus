@@ -1,4 +1,4 @@
-**Please understand though that the ZenphotoCMS team has no resources to actively develop or maintain these themes. But we can help fixing bugs with newer releases if pointed to it. Contributions via pull requests are also welcome.**
+**Please understand that the ZenphotoCMS team has no resources to actively develop or maintain this theme. But we can help fix bugs with newer releases if pointed to them. Contributions via pull requests are also welcome.**
 
 # Libratus
 Libratus is a [Zenphoto](http://zenphoto.org) theme that is fully responsive which looks great on desktop to mobile naturally using mobile first design.  It utilizes image and album statisitcs more heavily than other themes, although not required.  Home page has a full screen slideshow with optional images to pull (latest, random, popular, etc.).  Great theme for a site with a large image collection.
