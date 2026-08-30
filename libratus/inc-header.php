@@ -39,7 +39,7 @@ if (!empty($randomImages) ) {
 <head>
 	<meta charset="<?php echo LOCAL_CHARSET; ?>" />
 	<?php 
-	zp_apply_filter('theme_head');
+	filter::applyFilter('theme_head');
 	printHeadTitle(); 
 	?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -90,7 +90,7 @@ if (!empty($randomImages) ) {
 		<?php } ?>
 	</script>
 	<?php } ?>
-	<?php zp_apply_filter('theme_body_open'); ?>
+	<?php filter::applyFilter('theme_body_open'); ?>
 	<!-- Pushy Menu -->
 	<nav class="pushy pushy-right">
 		<?php if (file_exists(UPLOAD_FOLDER.'/logo.png')) { ?>

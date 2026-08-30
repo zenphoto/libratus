@@ -50,7 +50,7 @@ if ($total == 0) {
 					<br /><h5><?php echo gettext('Sorry, no matches found. Try refining your search.'); ?></h5>
 					<?php } ?>
 					
-					<?php if (isAlbumPage()) { ?>
+					<?php if (hasAlbums()) { ?>
 					<div class="gallery-thumbs-large">
 						<?php while (next_album()): ?>
 						<div>
